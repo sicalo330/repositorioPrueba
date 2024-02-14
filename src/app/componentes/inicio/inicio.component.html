@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="card mt-5">
+        <div class="card-header">
+            Estudiantes
+        </div>
+        <div class="card-body">
+            contenido de estudiantes
+            <hr>
+            <div *ngIf="listEstudiantes.length == 0">No hay registro de estudiantes</div>
+            <div *ngIf="listEstudiantes.length != 0" >
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Identificación</th>
+                        <th>Nombre</th>
+                        <th>Calificación</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let estudiante of listEstudiantes">
+                        <td>{{ estudiante.id }}</td>
+                        <td>{{ estudiante.nombre }}</td>
+                            <td>{{ estudiante.calificacion }}</td>
+                        </tr>
+    
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
